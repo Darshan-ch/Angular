@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <title>document</title>
+	 <script>
+	 class Person
+	 {
+		constructor(fname,lname){
+			this.fname=fname;
+			this.lname=lname;
+		}
+		
+		toString()			
+		{
+			return `${this.fname} ${this.lname}`;
+		}
+	 }
+	 class Emp extends Person
+	 {
+		constructor(fname,lname,designation){
+			super(fname,lname);
+			this.designation=designation;
+		}
+		
+		toString()				//Overridden method
+		{
+			return `${this.fname} ${this.lname} ${this.designation}`;
+		}
+	 }
+	 let g = new Emp("Swetha","N","Developer");
+	 document.write(g.fname+ "<br/>");
+	 document.write(g.lname+ "<br/>");
+	 document.write(g.designation+ "<br/>");
+	 document.write(g.toString()+ "<br/>");
+	 
+	 let h = new Person("Shalini","N");
+	 document.write(h.fname+ "<br/>");
+	 document.write(h.lname+ "<br/>");
+	 document.write(h.designation+ "<br/>");
+	 document.write(h.toString()+ "<br/>");
+	 	 
+	 	 	document.write("<br/><br/><br/><br/>");
+	 </script>	
+</head>
+<body>
+    Welcome to JAVASCRIPT!
+</body>
+</html>

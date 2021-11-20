@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+    <script>
+        function pluralizer(){
+          
+          var noun=(prompt("Enter noun"));
+          var num=parseInt(prompt("Enter number"));
+          if(num==1)
+          document.write(num+noun);
+        
+        else{
+            document.write(num+noun+"s");
+        }
+    }       
+       </script>
+</head>
+<body>
+    
+    <form name="myform" onsubmit="pluralizer()">
+        Noun: <input type="text" name="noun"/>
+        Num : <input type="text" name="num"/>
+        <input type="submit" value="output"/>
+        </form>
+        
+    
+</body>
+</html>

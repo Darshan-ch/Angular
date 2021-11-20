@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <title>dars</title>
+	 <script>
+	    //Spread Operator  ...
+	    const arr1=["Rose","Pink","Yellow"];
+		const arr2= [...arr1,"Blue","Orange"];
+		
+		document.write(arr1 + "<br/>");
+		document.write(arr2 + "<br/>");
+		
+		//Default Parameters
+		function prod(x=1,y=2){
+			return x*y;
+		}
+		function sum(x,y=4,z=2+x,v=x+prod())
+		{
+		document.write("Sum = "  + (x+y) +"  " + z+"  " +v + "<br/>");			
+		}
+		
+		sum(5);
+		sum(null);
+		
+		//Rest parameter
+		let func=function(...param){
+			document.write(...param+"<br/>");
+		}
+		func(3);
+		func(3,2);
+		func(1,4,5);
+		func(2,5,8,1);
+		
+		function add(a,b,c,d)
+		{
+			document.write((a+b+c+d)+"<br/>");
+		}
+		const arr4 = [11,2,3,1];
+		add(...arr4);
+		
+	 	document.write("<br/><br/><br/><br/>");
+	 </script>	
+</head>
+<body>
+    
+</body>
+</html>

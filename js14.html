@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <title>My First JAVASCRIPT</title>
+	 <script>
+	      class Emp
+		  {
+		     #salary 
+			constructor(fname,lname,salary){
+				this.fname=fname;
+				this.lname=lname;
+				this.#salary=salary;
+			}
+			showFullName()
+			{
+				document.write(this.fname+" " +this.lname + "<br/>");
+			}
+			showSalary()
+			{
+				return this.#salary;
+			}  
+		  
+		  }
+		  let e = new Emp("Shraddha","S",25000);
+		  e.showFullName();
+		  document.write(e.salary);
+		  //document.write(e.showSalary());
+		  
+	 
+	 	 	document.write("<br/><br/><br/><br/>");
+	 </script>	
+</head>
+<body>
+    Welcome to JAVASCRIPT!
+</body>
+</html>

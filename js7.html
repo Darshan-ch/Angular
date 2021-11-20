@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <title>My First JAVASCRIPT</title>
+	 	
+</head>
+<body>
+    Welcome to JAVASCRIPT!
+	<form>
+	
+     <input type="submit" value="Login" onclick="window.alert('Welcome Onboard')"/>
+	 <a href="http://www.google.com" onmouseover="window.alert('You are about to click GOOGLE')">Google</a>
+	</form>
+	<script>
+	     function showTime()
+		 {
+			var t= new Date();
+			document.getElementById("clock").innerHTML = t.toLocaleTimeString();
+		 }
+		 setInterval(showTime,1000);
+
+         function changeColor()
+         {
+             document.body.style.backgroundColor="pink"
+         }
+         document.addEventListener("click",changeColor);
+	 
+	 	 document.write("<br/><br/><br/><br/>");
+	 </script>
+	<p> <h2>Time Now : <span id="clock"></span></h2></p>
+	
+</body>
+</html>

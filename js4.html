@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <title>activity4</title>
+	 <script>
+	 //document.write(+"<br/>");
+	 // Declaration way - syntax 1
+	 
+	 document.write(evenorodd(180)+"<br/>");
+	 function evenorodd(num)
+	 {
+	     if(num%2 == 0)
+		 {
+			return "Even Number";
+		 }
+		 else
+		 {
+			return "Odd Number";
+		 }
+	 }
+	 
+	 
+	 
+	
+	 //Expression way -- syntax 2 
+	 //document.write(evenodd(5100)+"<br/>");  // Errror if called before creating a function
+	 var evenodd = function(num){
+		 if(num%2 == 0)
+		 {
+			return num + " is a Even Number";
+		 }
+		 else
+		 {
+			return num + " is a Odd Number";
+		 }
+	 }
+	 document.write(evenodd(10)+"<br/>");
+	 
+	 
+	 /*
+	 Function hoisting
+-- calling a function before creating it. 
+Not possible if U use Expression way syntax
+	 */
+	 	 
+	 document.write("<br/>");
+	 </script>	
+</head>
+<body>
+    Welcome to JAVASCRIPT!
+</body>
+</html>

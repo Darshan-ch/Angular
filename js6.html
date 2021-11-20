@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <title>JAVASCRIPT</title>
+	 <script>
+	 function validateForm()
+	 {
+	 var un=document.myform.uname.value;
+	 var pw=document.myform.pwd.value;
+	
+	 if(un==null || un=="")
+	 {
+		alert("User name should not be Blank");
+		return false;
+     }
+	 if(pw.length <6)
+	 {
+		alert("Password should be 6 characters");
+		return false;
+	 }
+		 
+	 }
+	 document.write("<br/><br/><br/><br/>");
+	 </script>	
+</head>
+<body>
+    Welcome to JAVASCRIPT!
+	<form name="myform" action="welcome.html" onsubmit="return validateForm()">
+	 User Name: <input type="text" name="uname" placeholder="User name" size="10" />
+     Password : <input type="text" name="pwd" placeholder="Password"  size="10" />
+     <input type="submit" value="Login"/>
+	
+	</form>
+	
+	
+	
+</body>
+</html>

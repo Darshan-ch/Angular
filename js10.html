@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>javas</title>
+    <script>
+        //syntax-1
+  class Emp
+  {
+      constructor(fname,lname,dob){
+      this.fname=fname;
+      this.lname=lname;
+      this.dob=dob;
+      }
+  }
+  var emp1 = new Emp("darshan","ch","23042000");
+  var emp2 = new Emp("abhi","urs","15081999");
+
+  document.write(emp1.fname+" "+emp1.lname+" "+emp1.dob+"<br/>");
+  document.write(emp2.fname+" "+emp2.lname+" "+emp2.dob+"<br/>");
+
+  //syntax-2
+  var emp01={
+      "fname":"manoj",
+      "lname":"l",
+      "dob":"1998"
+  }
+  var emp02=Object.create(emp01);
+  emp02.fname="tarun";
+  emp02.lname="cv";
+  emp02.dob="2000";
+  document.write(emp01.fname+" "+emp01.lname+" "+emp01.dob+"<br/>");
+  document.write(emp02.fname+" "+emp02.lname+" "+emp02.dob+"<br/>");
+
+  //Function assinged to a property of an object
+  var student ={
+			"fname" :"deb",
+		   "lname" : "Sarkar",
+		   "dob" : "1999",
+		   "getFullName": function(){
+				return this.fname+" " + this.lname;
+		   },
+		   "knownLang":["English","Hindi","Kannada"],
+		   "fluency":{
+				"native":"English",
+				"beginner":"Chinese",
+				"intermediate":"German"
+		   }
+		   
+		}
+		document.write(student.fname+ " " + student.lname+ "  " + student.dob + "<br/>");
+		document.write(student.knownLang[1]+ " " + student.fluency.beginner+" "+student.fluency.intermediate+"<br/>");
+		document.write(student.getFullName()+"<br/>");
+		
+		//Calling a function within a function
+		var name;
+		function showName()
+		{
+			getNameFromUser();
+			alert("Welcome " + name)
+		}
+		function getNameFromUser()
+		{
+			name=prompt("Enter your name");
+		}
+		showName();
+
+        // Syntax 3
+		function addPrice(amount)
+		{
+			this.price = amount;
+		}
+		function book(subj, author, publication)
+		{
+			this.subject = subj;
+			this.author=author;
+			this.publication=publication;
+			this.amt=addPrice;
+		}
+		
+		var mybook = new book("Java","Sam","Tata");
+		document.write(mybook.subject+" " +mybook.author+" " + mybook.publication+"<br/>");
+	   mybook.amt(1000);
+	   document.write(mybook.price);
+     </script>
+</head>
+<body>
+    
+</html>

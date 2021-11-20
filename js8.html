@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <title>My First JAVASCRIPT</title>
+	 <script>
+	  function add(){
+		//var n1 = parseInt(document.myform.num1.value);
+		//var n2 = parseInt(document.myform.num2.value);
+		
+		var num1=parseInt(prompt("Enter number1"));
+		var num2=parseInt(prompt("Enter number2"));
+		document.write(num1+num2);
+		//return n1+n2;
+	  }
+		
+	 </script>
+</head>
+<body>
+	<form name="myform" onsubmit="add()">
+	Number 1: <input type="text" name="num1"/>
+	Number 2: <input type="text" name="num2"/>
+	<input type="submit" value="Add"/>
+	</form>
+	
+	
+	
+</body>
+</html>
